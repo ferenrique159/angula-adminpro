@@ -5,11 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
 
+
 // Components
 import { AppComponent } from './app.component';
 import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 import { AuthModule } from './auth/auth.module';
-
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AuthModule } from './auth/auth.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    AuthModule
+    AuthModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
