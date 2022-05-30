@@ -13,7 +13,7 @@
                         <li><a href="">My Profile </a></li>
                         <li><a href="">My Balance</a></li>
                         <li><a href="">Inbox</a></li>
-                        <li><a routerLink='/dashboard/account-settings' routerLinkActive="router-link-active">Account Setting</a></li>
+                        <li><a routerLink='/dashboard/account-settings'>Account Setting</a></li>
                         <li><a routerLink="/login">Logout</a></li>
                     </ul>
                 </li>
@@ -30,7 +30,8 @@
                     </a>
                     <ul aria-expanded="false" class="collapse">
                         <li *ngFor="let menuItem of item.submenu">
-                            <a [routerLink]="menuItem.url"> {{ menuItem.titulo }} </a>
+                            <a [routerLink]="menuItem.url" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ menuItem.titulo }} </a>
+                            <!-- El routerActiveOptions es para indicar que todas las opciones del active sean exactas, ya que en el routing tiene un parecido con el dash con todas -->
                         </li>
                     </ul>
                 </li>

@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class SettingsService {
 
+  // Servicio para implementar el cambio de color en el sidebar con cambio de check en su respectivo cuadro
+
   private linkTheme = document.querySelector('#theme');
 
   constructor() {
@@ -29,7 +31,7 @@ export class SettingsService {
 
     const links = document.querySelectorAll('.selector');
 
-    // El forEach lo que hace es buscsar todos los elementos html de tal lista y asi indicar sus valores
+    // El forEach lo que hace es buscar todos los elementos html de tal lista y asi indicar sus valores
     links.forEach( elem =>{
 
       // con el REMOVE se indica que a todos los elementos se le va a remover por predeterminado la clase working
